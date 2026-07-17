@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
  * @param {string} url - адрес для запроса
  * @returns {[any, boolean, object|null]} - [data, loading, error]
  */
-function useJsonFetch(url, options = {}) {
+function useJsonFetch(url = {}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ function useJsonFetch(url, options = {}) {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(url, options);
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error(`Ошибка HTTP: ${response.status} ${response.statusText}`);
         }

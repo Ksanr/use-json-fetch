@@ -23,7 +23,7 @@ function App() {
         {/* Пример 3: Демонстрация загрузки (запрос с задержкой) */}
         <DataViewer
           title="⏳ Демонстрация загрузки"
-          url="https://reqres.in/api/users?delay=3"
+          url="https://reqres.in/api/users?delay=10"
         />
       </div>
     </div>
